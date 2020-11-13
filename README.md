@@ -8,23 +8,23 @@ Activity recommender is a web application that uses different algorithms for fin
 
 ## Main features
 
-Login / Register
-Calendar module
-Group system
-Find common activity functionality
-Find common interval  functionality
-Email system 
-Admin panel
+- Login / Register
+- Calendar module
+- Group system
+- Find common activity functionality
+- Find common interval  functionality
+- Email system 
+- Admin panel
 
 ## Business requirements
 
-The user will be able to create an account and log in
-The user will be able to select his free time for activities
-The user will be able to select his favorite activities
-The user user will be able to create groups and add users in them
-The user will be able to find de common activity of the group
-The user will be able to find the common interval of the group
-The admin will be able to manage entire entities ( users, groups, categories, activities etc.: view, edit, delete)
+- The user will be able to create an account and log in
+- The user will be able to select his free time for activities
+- The user will be able to select his favorite activities
+- The user user will be able to create groups and add users in them
+- The user will be able to find de common activity of the group
+- The user will be able to find the common interval of the group
+- The admin will be able to manage entire entities ( users, groups, categories, activities etc.: view, edit, delete)
 
 
 
