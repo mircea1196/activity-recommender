@@ -1,7 +1,9 @@
 package ro.unibuc.fmi.activityrecommender.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
@@ -9,11 +11,13 @@ import javax.persistence.*;
 @Table(name = "activity")
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Activity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenceGenerator")
-    @SequenceGenerator(name = "sequenceGenerator")
+    @GeneratedValue(generator = "ACTIVITY_SEQ", strategy = GenerationType.SEQUENCE)
+    @SequenceGenerator(name = "ACTIVITY_SEQ", sequenceName = "activity_seq", allocationSize = 1)
     private Long id;
 
     @Column(name = "name")

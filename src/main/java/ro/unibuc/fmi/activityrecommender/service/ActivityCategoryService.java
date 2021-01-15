@@ -15,9 +15,8 @@ public class ActivityCategoryService {
     private final ActivityCategoryRepository activityCategoryRepository;
 
     public ActivityCategory getBy(final Long id) {
-        return activityCategoryRepository.findById(id).orElseThrow(() ->  {
-            throw new GenericException("ActivityCategory by id " + id + " not found!");
-        } );
+        return activityCategoryRepository.findById(id).orElseThrow(() ->
+            new GenericException("ActivityCategory by id " + id + " not found!"));
     }
 
     public ActivityCategory save(final ActivityCategory activityCategory) {

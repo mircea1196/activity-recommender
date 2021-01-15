@@ -15,9 +15,9 @@ public class IntervalService {
     private final IntervalRepository intervalRepository;
 
     public Interval getBy(final Long id) {
-        return intervalRepository.findById(id).orElseThrow(() ->  {
-            throw new GenericException("Interval by id " + id + " not found!");
-        } );
+        return intervalRepository.findById(id).orElseThrow(() ->
+             new GenericException("Interval by id " + id + " not found!")
+         );
     }
 
     public Interval save(final Interval interval) {

@@ -5,13 +5,15 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
+import java.time.LocalDateTime;
+
 @AllArgsConstructor
 @NoArgsConstructor
+@Data
 @Builder
-public class UserGroupModel {
+public class CommonIntervalModel {
 
-    private String username;
-    private Long groupId;
+    LocalDateTime startDate;
+    LocalDateTime endDate;
 
 }

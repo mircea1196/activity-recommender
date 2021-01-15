@@ -15,9 +15,9 @@ public class UserIntervalService {
     private final UserIntervalsRepository userIntervalsRepository;
 
     public UserIntervals getBy(final Long id) {
-        return userIntervalsRepository.findById(id).orElseThrow(() ->  {
-            throw new GenericException("UserInterval by id " + id + " not found!");
-        } );
+        return userIntervalsRepository.findById(id).orElseThrow(() ->
+                new GenericException("UserInterval by id " + id + " not found!")
+        );
     }
 
     public UserIntervals save(final UserIntervals userInterval) {

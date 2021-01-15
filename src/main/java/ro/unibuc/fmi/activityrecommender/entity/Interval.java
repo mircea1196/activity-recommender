@@ -1,7 +1,9 @@
 package ro.unibuc.fmi.activityrecommender.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.ZonedDateTime;
@@ -10,11 +12,13 @@ import java.time.ZonedDateTime;
 @Table(name = "interval")
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Interval {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenceGenerator")
-    @SequenceGenerator(name = "sequenceGenerator")
+    @GeneratedValue(generator = "INTERVAL_SEQ_GEN", strategy = GenerationType.SEQUENCE)
+    @SequenceGenerator(name = "INTERVAL_SEQ_GEN", sequenceName = "interval_seq", allocationSize = 1)
     private Long id;
 
     @Column(name = "interval_id", nullable = false)
